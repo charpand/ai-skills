@@ -1,32 +1,51 @@
 # Copilot Instructions for ai-skills
 
-This repository is a skills library for Copilot and AI agents, containing reusable thinking patterns, review frameworks, and explanation styles.
+This repository contains agent skills: reusable thinking frameworks that define how reasoning should be performed and how output should be judged.
 
-## Repository Status
+## What This Repository Contains
 
-This is a new repository in early development. As content is added, these instructions will be updated to reflect build processes, testing patterns, and architectural conventions.
+**Skills** - Not tasks, templates, or prompts. Each skill defines:
+- A thinking framework or evaluation approach
+- Quality criteria and mental models
+- Common reasoning pitfalls to avoid
 
-## Key Guidelines for Contributors
+See `SKILL_USAGE.md` for detailed guidance on applying skills, and `AGENT_INSTRUCTIONS.md` for binding requirements when using this repository as context.
 
-- **Document thinking patterns clearly** - Include context about when and why each pattern is useful
-- **Keep review frameworks practical** - They should be actionable for real code review scenarios
-- **Focus on explanation styles** - Document clear examples showing how to explain technical concepts effectively
-- **Maintain accessibility** - Explanations should be understandable to developers at various skill levels
+## Skill Domains
 
-## File Structure (to be established)
+- **engineering/** - Infrastructure design, system architecture evaluation, and technical decision frameworks
+- **explaining/** - Communication and translation frameworks for diverse audiences
+- **governance/** - Decision quality, participation authenticity, and standards enforcement
+- **meta/** - Meta-frameworks that apply to skill definition and quality itself
 
-As the repository grows, organize content into logical categories that group related skills and patterns.
+## Creating New Skills
 
-## Testing and Validation
+Each skill MUST contain exactly these seven sections in order:
 
-Once code and content are added, establish:
-- Validation approach for code examples in documentation
-- Process for testing explanation clarity and effectiveness
+1. **Name** - Concise, descriptive title
+2. **Intent** - What cognitive challenge this addresses and when to apply it
+3. **Mental Model** - Core conceptual framework and underlying principles
+4. **Thinking Steps** - Ordered reasoning steps and decision points
+5. **Quality Bar** - Criteria distinguishing excellent from poor outcomes
+6. **Common Failure Modes** - Typical reasoning errors and anti-patterns
+7. **Example Use** - Abstract scenario demonstrating the thinking process
+
+All skills must be agent-agnostic, domain-reusable, and time-stable. See `SKILL_USAGE.md` for validation requirements.
+
+## Writing Style
+
+- Third-person, declarative statements ("The agent evaluates..." not "You should...")
+- Technical, precise, neutral tone
+- No first/second-person pronouns, emojis, rhetorical questions, or exclamation points
+- Bullet points for lists; numbered lists for sequences
+- Concrete criteria over vague guidance
 
 ## Contributing
 
-When adding new skills, patterns, or frameworks:
-1. Include clear examples and use cases
-2. Document assumptions and limitations
-3. Consider cross-referencing with related patterns
-4. Ensure explanations are concrete and practical
+When adding new skills:
+1. Ensure the skill describes thinking/evaluation, not task execution
+2. Verify it applies across multiple unrelated domains
+3. Include no references to specific projects, organizations, tools, or platforms
+4. Validate all seven sections are present and complete
+5. Use concrete examples, not real project names or proprietary data
+6. Commit with message format: `skill(<domain>): <skill-name>`
