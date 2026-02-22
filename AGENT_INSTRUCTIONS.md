@@ -129,3 +129,12 @@ Explicit reasoning about skill application is preferable to silence or implicit 
 - **Explicit reasoning and transparent skill application beats implicit behavior**
 
 Follow skills strictly. If something feels ambiguous, surface the ambiguity instead of guessing.
+
+## Commit Message Standard
+
+This repository requires all commits to follow the Conventional Commits specification. See the full standard and guidelines in the `knowledge-work` repository at `advisory/conventional-commits-standard.md`.
+
+When committing changes to this repository:
+- Use the proper commit type (`feat`, `fix`, `docs`, etc.)
+- Include optional scope in parentheses if relevant
+- Write clear, imperative subject lines (max 50 characters)
