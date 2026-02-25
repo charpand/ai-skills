@@ -1,12 +1,12 @@
-# PHP 8.5 Design Review
+# Modern PHP Design Review
 
 ## Intent
 
-PHP 8.5 introduces expressive type-system features, first-class callable syntax, fibers, enums, intersection and union types, readonly properties, and modern object-oriented constructs that substantially raise the ceiling for code quality. This framework guides systematic evaluation of PHP 8.5 codebases to distinguish designs that exploit contemporary language capabilities from those that carry forward legacy idioms or anti-patterns. The agent applies this skill when assessing whether PHP code achieves strong type safety, appropriate use of modern language constructs, clarity of domain modeling, and sustainable maintainability.
+Modern PHP 8.x provides expressive type-system features, first-class callable syntax, fibers, enums, intersection and union types, readonly properties, and modern object-oriented constructs that substantially raise the ceiling for code quality. This framework guides systematic evaluation of PHP codebases to distinguish designs that exploit contemporary language capabilities from those that carry forward legacy idioms or anti-patterns. The agent applies this skill when assessing whether PHP code achieves strong type safety, appropriate use of modern language constructs, clarity of domain modeling, and sustainable maintainability.
 
 ## Mental Model
 
-Well-designed PHP 8.5 code treats the **type system as executable documentation**. Types, enums, readonly properties, and intersection types express domain invariants that cannot be violated at runtime. Poor PHP design relies on loose typing, docblock conventions unverified by runtime or static analysis, mutable state without justification, and structural inheritance where composition or interfaces are more appropriate.
+Well-designed PHP 8.x code treats the **type system as executable documentation**. Types, enums, readonly properties, and intersection types express domain invariants that cannot be violated at runtime. Poor PHP design relies on loose typing, docblock conventions unverified by runtime or static analysis, mutable state without justification, and structural inheritance where composition or interfaces are more appropriate.
 
 The underlying principle is that PHP's evolution from a loosely-typed scripting language to a statically-analyzable, expressive object-oriented language requires deliberate opt-in to modern idioms. Code that opts out—through mixed types, nullable everything, and unconstrained mutability—discards the safety guarantees the language now provides.
 

@@ -14,7 +14,7 @@ The underlying principle is that Symfony's dependency injection container exists
 
 1. **Assess controller design**: Do controllers contain only orchestration logic—receiving input, invoking application services, and returning responses? Is domain logic absent from controllers? Are controllers thin, with each action expressible as "receive, validate, delegate, respond"?
 
-2. **Examine service and dependency injection design**: Are services declared with constructor injection rather than property or setter injection (except where Symfony's component contracts require otherwise)? Is the container accessed at runtime via `$this->container->get()` anywhere outside framework bootstrap code? Are services appropriately scoped (request-scoped where needed, shared otherwise)?
+2. **Examine service and dependency injection design**: Are services declared with constructor injection rather than property or setter injection (except where Symfony's component contracts require otherwise)? Is the container accessed at runtime via `$this->container->get()` anywhere outside framework bootstrap code? Are services stateless and shared by default, with request-specific data passed explicitly or accessed via `RequestStack`, and non-shared services configured with `shared: false` only where genuinely required?
 
 3. **Review event and message bus usage**: Are Symfony Messenger messages used to decouple asynchronous operations from synchronous request handling? Are events dispatched for cross-cutting notifications rather than used as a control flow mechanism for sequential operations? Are event handlers free of domain logic that belongs in services?
 
