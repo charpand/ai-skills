@@ -1,0 +1,17 @@
+{
+  "name": "ai-skills",
+  "version": "1.0.0",
+  "description": "Reusable thinking frameworks for AI agents and developers",
+  "private": true,
+  "engines": {
+    "node": "22.x",
+    "npm": "11.x"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.15.1"
+  },
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 '**/*.md'",
+    "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md'"
+  }
+}
