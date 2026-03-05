@@ -10,10 +10,12 @@
   "devDependencies": {
     "markdownlint-cli2": "^0.15.1",
     "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.0.0"
+    "@commitlint/config-conventional": "^19.0.0",
+    "@jackchuka/mdschema": "^0.2.2"
   },
   "scripts": {
     "lint:markdown": "markdownlint-cli2 '**/*.md'",
-    "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md'"
+    "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md'",
+    "validate:skills": "mdschema check --config .mdschema.yml engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md"
   }
 }

@@ -1,0 +1,36 @@
+$schema: "https://raw.githubusercontent.com/jackchuka/mdschema/main/src/schema.json"
+
+rules:
+  - type: heading
+    level: 1
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Intent$"
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Mental Model$"
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Thinking Steps$"
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Quality Bar$"
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Common Failure Modes$"
+    required: true
+
+  - type: heading
+    level: 2
+    pattern: "^Example Use$"
+    required: true
