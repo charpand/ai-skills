@@ -29,6 +29,7 @@ The underlying principle is that Twig's inheritance, block, macro, and include m
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Templates that contain no domain logic; all filtering, computation, and transformation performed before template rendering
 - A clear, shallow inheritance hierarchy with a canonical base layout and well-named blocks
 - Macros that accept only the data they render, with explicit parameter lists
@@ -39,6 +40,7 @@ The underlying principle is that Twig's inheritance, block, macro, and include m
 - No inline styles or behavior-altering attributes mixed into structural templates
 
 **Poor design exhibits**:
+
 - Domain conditions (user role checks, business rule tests) evaluated inside templates
 - Structural duplication across templates that should be composed via inheritance or macros
 - Raw output of unescaped user data without explicit documented justification

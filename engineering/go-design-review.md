@@ -31,6 +31,7 @@ The underlying principle is that code clarity should not require execution to un
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Packages with clear, single responsibilities; public APIs express only consumer concerns
 - Interfaces defined by behavior consumers, not providers; interfaces are narrow (1-3 methods)
 - Explicit dependencies: imports and uses are visible; no global state, reflection hacks, or runtime discovery
@@ -41,6 +42,7 @@ The underlying principle is that code clarity should not require execution to un
 - Resource cleanup is guaranteed: defer statements ensure cleanup even on panic or error
 
 **Poor design exhibits**:
+
 - Packages with unclear responsibility; consumers must understand internal implementation to use the package
 - Broad interfaces (5+ methods); interfaces designed by providers not consumers; interfaces that leak implementation
 - Implicit dependencies: global state, reflection-based initialization, environment variable discovery, or side effects hidden in imports

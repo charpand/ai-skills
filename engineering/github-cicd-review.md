@@ -29,6 +29,7 @@ The underlying principle is that a pipeline that can be bypassed is not a gate; 
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Permissions declared at the most granular level required; default permissions not relied upon
 - All third-party actions pinned to commit SHAs with the action name in a comment for readability
 - Secrets scoped to the job or step that requires them; not exported to the full environment
@@ -39,6 +40,7 @@ The underlying principle is that a pipeline that can be bypassed is not a gate; 
 - Deployment jobs gated on passing test and security scan jobs
 
 **Poor design exhibits**:
+
 - Blanket `permissions: write-all` or default permissions without explicit declaration
 - Third-party actions referenced by mutable version tags (`@v3`, `@main`) rather than commit SHAs
 - Secrets injected into global job environment rather than only the steps that use them

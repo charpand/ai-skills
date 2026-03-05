@@ -29,6 +29,7 @@ The underlying principle is that PHP's evolution from a loosely-typed scripting 
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Strict types declared (`declare(strict_types=1)`) in every file
 - Function and method signatures fully typed including return types, with `void` and `never` used appropriately
 - Enums replacing finite-value constants throughout the domain model
@@ -39,6 +40,7 @@ The underlying principle is that PHP's evolution from a loosely-typed scripting 
 - Static analysis (PHPStan level 8 or Psalm strict mode) passing without suppressions
 
 **Poor design exhibits**:
+
 - Missing type declarations or pervasive use of `mixed`, `array`, or unparameterized collections
 - String or integer constants replacing enums for finite domain values
 - Mutable public properties without justification

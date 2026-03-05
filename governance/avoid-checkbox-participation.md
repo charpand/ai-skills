@@ -31,6 +31,7 @@ The core principle is that **observable change in outcomes based on input is the
 ## Quality Bar
 
 **Substantive participation exhibits**:
+
 - Multiple meaningfully-different outcomes are genuinely possible and were possible when soliciting input
 - Information provided to decision-makers includes the full range of participant perspectives, including dissenting views
 - Participants can identify concrete examples where their input changed outcomes
@@ -40,6 +41,7 @@ The core principle is that **observable change in outcomes based on input is the
 - Participants can observe and validate whether input influenced the outcome
 
 **Performative participation exhibits**:
+
 - The outcome appears predetermined or constrained in ways that eliminate most alternatives before seeking input
 - Participant input is solicited broadly but only a narrow range of opinions is ultimately reflected in decision-making
 - Objections are acknowledged but systematically dismissed or minimized without substantive engagement

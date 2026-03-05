@@ -29,6 +29,7 @@ The underlying principle is that infrastructure code is a form of specification:
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Modules with a single, unambiguous responsibility that can be stated in one sentence
 - Input variables limited to externally-variable decisions, with sensible defaults for technical details
 - Explicit dependency declarations; dependencies are never implicit or discovered at runtime
@@ -38,6 +39,7 @@ The underlying principle is that infrastructure code is a form of specification:
 - Each responsibility can be tested, deployed, and modified independently from logically unrelated responsibilities
 
 **Poor design exhibits**:
+
 - Modules with multiple responsibilities requiring simultaneous modification
 - Inputs that expose implementation details or require consumers to make technical decisions
 - Hard-coded values, assumptions, or environment-specific logic scattered throughout

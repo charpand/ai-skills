@@ -29,6 +29,7 @@ Accurate translation preserves what the audience needs to know while removing wh
 ## Quality Bar
 
 **Effective translation exhibits**:
+
 - The core purpose and consequences are clear to someone hearing the explanation for the first time
 - Language uses everyday vocabulary and familiar concepts without introducing unexplained jargon
 - The explanation preserves the essential constraints, trade-offs, and limitations the audience needs to know
@@ -38,6 +39,7 @@ Accurate translation preserves what the audience needs to know while removing wh
 - The explanation is accurate: it does not require later correction or qualification
 
 **Ineffective translation exhibits**:
+
 - Dense jargon that non-specialists cannot parse without a dictionary
 - Analogies that oversimplify to the point of inaccuracy or create false intuition
 - Missing critical constraints or consequences the audience needs to understand
@@ -69,6 +71,7 @@ A finance team needs to understand why system reliability improvements provide b
 Analysis of the conceptual obstacle: The audience likely understands "faster is better" and "fewer outages is better," but does not have intuition for what these percentages and milliseconds represent in business terms, what causes these limitations, or why the improvement requires redesign rather than just optimization.
 
 Translation framework suggests:
+
 - The P99 latency metric represents: "When 100 customers use the system simultaneously, one of them experiences a 500-millisecond delay. This delay is long enough that the customer perceives it as broken."
 - The availability metric represents: "The system is unavailable for approximately 3.6 hours per year. This means that during those hours, customers cannot complete transactions."
 - The architectural constraint: "Current design shares resources among customer requests, so a single slow request delays others. The improvement requires isolating resources so one customer's problem does not affect others."

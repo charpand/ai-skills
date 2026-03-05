@@ -1,0 +1,31 @@
+{
+  "name": "ai-skills",
+  "version": "1.0.0",
+  "description": "Reusable thinking frameworks for AI agents and developers",
+  "private": true,
+  "engines": {
+    "node": "25.x",
+    "npm": "11.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "@jackchuka/mdschema": "^0.12.4",
+    "alex": "^11.0.0",
+    "glob": "^11.0.0",
+    "markdown-link-check": "^3.11.0",
+    "markdownlint-cli2": "^0.21.0",
+    "retext": "^9.0.0",
+    "retext-english": "^5.0.0",
+    "retext-readability": "^8.0.0"
+  },
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 '**/*.md' '!node_modules/**'",
+    "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md' '!node_modules/**'",
+    "validate:skills": "node scripts/validate-skills.js",
+    "validate:content": "npm run validate:inclusive && npm run validate:links && npm run validate:readability",
+    "validate:inclusive": "alex '**/*.md' --ignore-words ok,fail,failed,failures",
+    "validate:links": "node scripts/validate-links.js",
+    "validate:readability": "node scripts/validate-readability.js"
+  }
+}
