@@ -18,36 +18,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Validate 7-section skill structure
-        run: |
-          errors=0
-          
-          # Find all markdown files in skill directories
-          for file in engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md; do
-            [ -f "$file" ] || continue
-            
-            # Skip non-skill files (README, etc)
-            if [[ "$file" == *"README"* ]]; then
-              continue
-            fi
-            
-            # Check for required sections
-            sections=("# " "## Intent" "## Mental Model" "## Thinking Steps" "## Quality Bar" "## Common Failure Modes" "## Example Use")
-            
-            for section in "${sections[@]}"; do
-              if ! grep -q "^${section}" "$file"; then
-                echo "❌ Missing section in $file: $section"
-                ((errors++))
-              fi
-            done
-          done
-          
-          if [ $errors -gt 0 ]; then
-            echo "::error::$errors skill structure violations found"
-            exit 1
-          else
-            echo "✓ All skills have valid 7-section structure"
-          fi
+        run: npm run validate:skills
 
   validate-commits:
     name: Validate Conventional Commits
