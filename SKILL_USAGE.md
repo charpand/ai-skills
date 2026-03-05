@@ -17,9 +17,11 @@ This document provides detailed guidance for agents on applying skills from the 
 Each skill has a predictable structure:
 
 ### Name
+
 The skill's title. Use this when referencing the skill explicitly.
 
 ### Intent
+
 - What cognitive challenge this skill addresses
 - When to apply it
 - What types of reasoning it enables
@@ -27,6 +29,7 @@ The skill's title. Use this when referencing the skill explicitly.
 Read Intent to verify the skill is relevant before investing time.
 
 ### Mental Model
+
 The core framework. This is not procedural—it is conceptual.
 
 It answers: "What is the underlying structure or principle at work here?"
@@ -34,6 +37,7 @@ It answers: "What is the underlying structure or principle at work here?"
 The Mental Model provides the lens through which Thinking Steps should be executed.
 
 ### Thinking Steps
+
 Ordered internal reasoning steps. These are not execution steps; they are evaluation or decision-making steps.
 
 Apply Thinking Steps in sequence. Each step builds on prior ones.
@@ -41,6 +45,7 @@ Apply Thinking Steps in sequence. Each step builds on prior ones.
 Thinking Steps may include branches (e.g., "if X is true, proceed to step N; otherwise continue here"). Follow those branches.
 
 ### Quality Bar
+
 **Two parts**:
 
 1. **Excellent design exhibits** - Observable characteristics of work that meets the standard
@@ -51,14 +56,17 @@ Before presenting output, verify it exhibits the characteristics of excellent de
 The Quality Bar is objective. If output does not meet it, do not present it as meeting the bar.
 
 ### Common Failure Modes
+
 Typical reasoning errors, anti-patterns, and pitfalls this skill prevents.
 
 After applying the skill, check your reasoning against these modes. If your reasoning exhibits a failure mode, reconsider.
 
 ### Example Use
+
 An abstract scenario demonstrating the skill in practice.
 
 The example shows:
+
 - The initial situation or question
 - How Thinking Steps apply
 - How the framework shaped reasoning
@@ -73,6 +81,7 @@ Do not treat the example as a template to imitate. It illustrates the *type* of 
 If multiple skills address different aspects of a problem, apply each to its domain.
 
 Example:
+
 - Use "Define and Enforce a Quality Bar" when establishing what acceptable output looks like
 - Use "Terraform Design Review" when evaluating whether a specific design meets that bar
 
@@ -81,6 +90,7 @@ Example:
 If multiple skills point toward the same reasoning, apply all of them to build confidence.
 
 Example:
+
 - Both "Translate Technical Concepts to Non-Technical Audiences" and "Jip-en-Janneke Explanation Mode" may apply to simplification tasks
 - Use both: first skill addresses general translation, second addresses extreme simplification
 - Output should meet the Quality Bar of both
@@ -95,6 +105,7 @@ If two skills recommend different approaches:
 4. **Surface the conflict explicitly**: Explain to the user that applying skill A contradicts applying skill B, and state which you prioritized and why
 
 Example conflict:
+
 - "Avoid Checkbox Participation" says decisions should have multiple genuinely-possible outcomes
 - "Define and Enforce a Quality Bar" says standards should be consistently applied
 - These can conflict: consistent standards can feel constraining to participation
@@ -147,6 +158,7 @@ After applying a skill and developing output:
 3. **If yes**: Reconsider the reasoning or output to eliminate the failure mode
 
 Example audit:
+
 - Skill: "Jip-en-Janneke Explanation Mode"
 - Failure mode: "Vocabulary substitution: replacing technical terms with everyday ones without simplifying"
 - Self-audit: "Did I just swap 'algorithm' for 'process' without actually explaining what the process is?"
@@ -167,17 +179,20 @@ Explicit reasoning beats silent assumption.
 ## Using Example Use Sections
 
 The Example Use section is not a template. It demonstrates:
+
 - The *type* of reasoning the skill enables
 - How the Mental Model shaped that reasoning
 - Where the Thinking Steps led
 - What the conclusion looks like
 
 Do not:
+
 - Copy the example's structure for your output
 - Assume your situation should follow the example's path exactly
 - Treat the example as a "correct answer" rather than one application of the framework
 
 Do:
+
 - Understand the shape of reasoning the example demonstrates
 - Apply the framework to your specific situation
 - Let the Mental Model guide your reasoning, not the example's conclusion
@@ -185,21 +200,25 @@ Do:
 ## Reference: Skill Domains
 
 ### engineering/
+
 Frameworks for infrastructure design, system architecture, and technical decision evaluation.
 
 Example skills: infrastructure modularity, design review, system complexity assessment.
 
 ### explaining/
+
 Frameworks for communication, translation, and exposition to diverse audiences.
 
 Example skills: simplification, translation, clarity.
 
 ### governance/
+
 Frameworks for decision quality, participation authenticity, and standards enforcement.
 
 Example skills: participation authenticity, standards definition, quality consistency.
 
 ### meta/
+
 Frameworks about frameworks: skill definition, quality bar establishment, and meta-reasoning.
 
 Example skills: quality bar definition, skill architecture itself.

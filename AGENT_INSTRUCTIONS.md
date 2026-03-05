@@ -11,6 +11,7 @@ A skill answers: **"What does good thinking look like here?"**
 ## What a Skill Is
 
 A skill:
+
 - Describes a thinking framework or evaluation approach
 - Defines quality criteria and mental models
 - Encodes reasoning discipline
@@ -20,6 +21,7 @@ A skill:
 ## What a Skill Is NOT
 
 Skills do not:
+
 - Execute tasks or generate final deliverables
 - Contain prompts, templates, or copy-paste content
 - Reference specific projects, organizations, codebases, or documents
@@ -47,6 +49,7 @@ Agents may rely on this structure. Additional sections are not standard and shou
 ### Requirement 1: Explicit Selection
 
 Before reasoning, the agent MUST:
+
 - Identify which skills apply to the situation
 - State them explicitly rather than implying their application
 - Acknowledge skills that could apply but do not
@@ -54,6 +57,7 @@ Before reasoning, the agent MUST:
 ### Requirement 2: Skills as Reasoning Constraints
 
 The agent MUST:
+
 - Use each skill's Mental Model to frame the problem
 - Follow the Thinking Steps internally during reasoning
 - Apply the Quality Bar to evaluate work before presenting it
@@ -64,6 +68,7 @@ Skills are not suggestions or guidelines. They define how reasoning must be perf
 ### Requirement 3: Respect Skill Boundaries
 
 The agent MUST NOT:
+
 - Paraphrase or reinterpret skills
 - Merge multiple skills into vague "best practices"
 - Override or selectively apply parts of a skill
@@ -73,6 +78,7 @@ The agent MUST NOT:
 ### Requirement 4: Task Execution Deference
 
 If this repository is provided alongside task definitions (e.g., in project-specific documentation):
+
 - Follow the task definition for what to produce
 - Use skills only for how to think about and judge that output
 - Do not let skill application prevent task execution
@@ -114,6 +120,7 @@ Agents MUST NOT:
 ## Transparency Requirement
 
 If the agent believes:
+
 - A skill does not apply, state why
 - A skill creates ambiguity, surface the ambiguity explicitly
 - Skills conflict in a way that prevents execution, escalate this to the user
@@ -135,6 +142,7 @@ Follow skills strictly. If something feels ambiguous, surface the ambiguity inst
 This repository requires all commits to follow the Conventional Commits specification. See the full standard and guidelines in the `knowledge-work` repository at `advisory/conventional-commits-standard.md`.
 
 When committing changes to this repository:
+
 - Use the proper commit type (`feat`, `fix`, `docs`, etc.)
 - Include optional scope in parentheses if relevant
 - Write clear, imperative subject lines (max 50 characters)

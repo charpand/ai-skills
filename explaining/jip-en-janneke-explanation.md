@@ -29,6 +29,7 @@ A "Jip-en-Janneke explanation" uses the vocabulary and conceptual resources avai
 ## Quality Bar
 
 **Excellent extreme simplification exhibits**:
+
 - Uses only vocabulary that a person without domain knowledge would understand
 - Relies on immediate sensory experience or common objects rather than requiring specialized knowledge
 - Explicitly states what is being simplified, removed, or idealized
@@ -39,6 +40,7 @@ A "Jip-en-Janneke explanation" uses the vocabulary and conceptual resources avai
 - The simplification reveals rather than obscures the real structure
 
 **Poor extreme simplification exhibits**:
+
 - Uses technical jargon or domain-specific language
 - Requires specialized knowledge or previous concepts to understand
 - Omits important qualifications without stating that it is doing so

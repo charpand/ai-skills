@@ -5,6 +5,7 @@ This repository contains agent skills: reusable thinking frameworks that define 
 ## What This Repository Contains
 
 **Skills** - Not tasks, templates, or prompts. Each skill defines:
+
 - A thinking framework or evaluation approach
 - Quality criteria and mental models
 - Common reasoning pitfalls to avoid
@@ -43,6 +44,7 @@ All skills must be agent-agnostic, domain-reusable, and time-stable. See `SKILL_
 ## Contributing
 
 When adding new skills:
+
 1. Ensure the skill describes thinking/evaluation, not task execution
 2. Verify it applies across multiple unrelated domains
 3. Include no references to specific projects, organizations, tools, or platforms

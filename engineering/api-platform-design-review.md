@@ -29,6 +29,7 @@ The underlying principle is that API Platform's resource model, state providers,
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Dedicated resource classes separate from Doctrine entities; entities never annotated as API resources directly
 - Each resource class representing a stable, versioned contract independent of persistence structure
 - Serialization groups controlling field exposure per operation; no default full-entity exposure
@@ -38,6 +39,7 @@ The underlying principle is that API Platform's resource model, state providers,
 - Complete OpenAPI documentation: resource descriptions, property descriptions, error responses
 
 **Poor design exhibits**:
+
 - Doctrine entities annotated as API Platform resources, exposing persistence schema through the API
 - Operations without security expressions, defaulting to public access
 - No serialization groups, exposing all entity properties to all callers
