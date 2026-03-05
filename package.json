@@ -21,10 +21,10 @@
   "scripts": {
     "lint:markdown": "markdownlint-cli2 '**/*.md'",
     "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md'",
-    "validate:skills": "mdschema check --config .mdschema.yml engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md",
+    "validate:skills": "node scripts/validate-skills.js",
     "validate:content": "npm run validate:inclusive && npm run validate:links && npm run validate:readability",
     "validate:inclusive": "alex '**/*.md' --ignore-words ok,fail,failed,failures",
-    "validate:links": "markdown-link-check --quiet --config .markdown-link-check.json '**/*.md'",
+    "validate:links": "node scripts/validate-links.js",
     "validate:readability": "node scripts/validate-readability.js"
   }
 }
