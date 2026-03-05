@@ -29,6 +29,7 @@ The underlying principle is that contrast and visual clarity are not cosmetic co
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - All text passing WCAG 2.1 AA contrast ratios (4.5:1 normal, 3:1 large) verified by calculation, not perception
 - Interactive component boundaries and focus indicators meeting 3:1 non-text contrast requirements
 - No information conveyed by color alone; always paired with a non-color differentiator
@@ -39,6 +40,7 @@ The underlying principle is that contrast and visual clarity are not cosmetic co
 - Dark mode or high-contrast mode support through adaptive token values
 
 **Poor design exhibits**:
+
 - Color choices made visually on a calibrated display without contrast ratio verification
 - Focus indicators styled to be invisible or barely visible to preserve aesthetics
 - Information (errors, required status, active state) communicated by color with no alternative

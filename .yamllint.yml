@@ -1,0 +1,12 @@
+extends: default
+rules:
+  document-start: disable
+  line-length:
+    max: 150
+    level: warning
+  truthy:
+    # Allows GitHub Actions `on:` workflow trigger key without flagging it
+    allowed-values: ["true", "false"]
+    check-keys: false
+  comments:
+    min-spaces-from-content: 1

@@ -31,6 +31,7 @@ The core principle is that **unstated or inconsistently-enforced standards creat
 ## Quality Bar
 
 **Effective standards exhibit**:
+
 - Criteria are stated in concrete, testable language; no vague terms like "good," "clean," or "professional" without definition
 - Acceptance can be objectively verified without interpretation or subjective judgment
 - Examples and counter-examples are provided that clearly show what meets and fails the standard
@@ -41,6 +42,7 @@ The core principle is that **unstated or inconsistently-enforced standards creat
 - The standard is regularly reviewed and updated as context changes
 
 **Ineffective standards exhibit**:
+
 - Criteria use vague language like "well-written," "professional," or "appropriate"
 - Acceptance requires interpretation or subjective judgment by reviewer
 - Unstated or inconsistent enforcement: work meeting the bar at time one is rejected at time two

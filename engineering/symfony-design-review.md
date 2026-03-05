@@ -29,6 +29,7 @@ The underlying principle is that Symfony's dependency injection container exists
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Controllers limited to input handling, service delegation, and response construction; no business logic
 - Constructor injection throughout; service container not accessed at runtime
 - Domain objects free of Symfony-specific annotations, interfaces, or base class inheritance
@@ -38,6 +39,7 @@ The underlying principle is that Symfony's dependency injection container exists
 - Tests for each layer in isolation: unit tests for domain, integration tests for services, functional tests for controllers
 
 **Poor design exhibits**:
+
 - Business logic in controllers, form types, or event listeners
 - Service locator pattern (`$container->get(...)`) used at runtime outside bootstrap code
 - Domain entities implementing Symfony interfaces (serializable, aware) or extending Symfony base classes

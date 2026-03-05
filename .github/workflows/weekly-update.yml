@@ -1,0 +1,39 @@
+name: Weekly Update Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-check:
+    name: Apply Lint Fixes and Open PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install markdownlint-cli2
+        run: npm install -g markdownlint-cli2
+
+      - name: Auto-fix Markdown issues
+        run: markdownlint-cli2 --fix "**/*.md" || true
+
+      - name: Open PR if changes were made
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-fix markdown lint issues"
+          branch: automated/weekly-lint-fixes
+          delete-branch: true
+          title: "chore: weekly markdown lint fixes"
+          body: |
+            Automated weekly update check.
+
+            This PR contains automatic fixes applied by markdownlint-cli2.
+            Review and merge if the changes look correct.
+          reviewers: charpand

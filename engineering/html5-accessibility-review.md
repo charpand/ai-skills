@@ -29,6 +29,7 @@ The underlying principle is that HTML semantics are the contract between a docum
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - Complete landmark structure enabling screen reader navigation without reading every element
 - Logical heading hierarchy reflecting document structure, not visual design preferences
 - Native HTML semantics for all standard interactive patterns; ARIA used only to supplement, never to replace available native semantics
@@ -39,6 +40,7 @@ The underlying principle is that HTML semantics are the contract between a docum
 - No information conveyed by color alone
 
 **Poor design exhibits**:
+
 - `<div>` and `<span>` used as buttons, navigation items, or headings without native element or complete ARIA substitution
 - Missing or incorrect `alt` text; images with `alt` text that describes appearance rather than meaning
 - Form inputs without labels, or labels associated only visually without programmatic connection
