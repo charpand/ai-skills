@@ -1,0 +1,86 @@
+name: Validate Content Structure
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-skill-structure:
+    name: Validate Skill Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate 7-section skill structure
+        run: |
+          errors=0
+          
+          # Find all markdown files in skill directories
+          for file in engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md; do
+            [ -f "$file" ] || continue
+            
+            # Skip non-skill files (README, etc)
+            if [[ "$file" == *"README"* ]]; then
+              continue
+            fi
+            
+            # Check for required sections
+            sections=("# " "## Intent" "## Mental Model" "## Thinking Steps" "## Quality Bar" "## Common Failure Modes" "## Example Use")
+            
+            for section in "${sections[@]}"; do
+              if ! grep -q "^${section}" "$file"; then
+                echo "❌ Missing section in $file: $section"
+                ((errors++))
+              fi
+            done
+          done
+          
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors skill structure violations found"
+            exit 1
+          else
+            echo "✓ All skills have valid 7-section structure"
+          fi
+
+  validate-commits:
+    name: Validate Conventional Commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check commit messages
+        run: |
+          # Get all commits in this PR
+          base_commit=$(git merge-base origin/main HEAD)
+          commits=$(git rev-list ${base_commit}..HEAD)
+          
+          errors=0
+          invalid_commits=""
+          
+          for commit in $commits; do
+            message=$(git log -1 --format=%B $commit)
+            subject=$(echo "$message" | head -n1)
+            
+            # Conventional Commits pattern: type(scope): subject
+            if ! echo "$subject" | grep -qE '^(feat|fix|docs|style|refactor|perf|test|chore|ci|build)(\(.+\))?: .{1,50}$'; then
+              echo "❌ Invalid commit: $subject"
+              invalid_commits="${invalid_commits}  - $subject\n"
+              ((errors++))
+            fi
+          done
+          
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors commit(s) do not follow Conventional Commits"
+            exit 1
+          else
+            echo "✓ All commits follow Conventional Commits format"
+          fi
