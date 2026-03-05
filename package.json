@@ -11,11 +11,20 @@
     "markdownlint-cli2": "^0.15.1",
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
-    "@jackchuka/mdschema": "^0.2.2"
+    "@jackchuka/mdschema": "^0.2.2",
+    "alex": "^11.0.0",
+    "markdown-link-check": "^3.11.0",
+    "retext": "^8.1.0",
+    "retext-readability": "^6.0.0",
+    "retext-english": "^4.2.0"
   },
   "scripts": {
     "lint:markdown": "markdownlint-cli2 '**/*.md'",
     "lint:markdown:fix": "markdownlint-cli2 --fix '**/*.md'",
-    "validate:skills": "mdschema check --config .mdschema.yml engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md"
+    "validate:skills": "mdschema check --config .mdschema.yml engineering/**/*.md explaining/**/*.md governance/**/*.md meta/**/*.md",
+    "validate:content": "npm run validate:inclusive && npm run validate:links && npm run validate:readability",
+    "validate:inclusive": "alex '**/*.md' --ignore-words ok,fail,failed,failures",
+    "validate:links": "markdown-link-check --quiet --config .markdown-link-check.json '**/*.md'",
+    "validate:readability": "node scripts/validate-readability.js"
   }
 }
