@@ -1,0 +1,16 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github.com/",
+      "comment": "GitHub URLs are often external references"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "https://example.com",
+      "replacement": "https://www.example.com"
+    }
+  ],
+  "timeout": 5000,
+  "retryOn": [429, 503]
+}
