@@ -33,6 +33,7 @@ The underlying model is that **every artifact boundary is an attack surface**. E
 ## Quality Bar
 
 **Excellent design exhibits**:
+
 - All GitHub Actions `uses:` references pinned to full commit SHAs with the action name and version in an adjacent comment for readability (e.g., `uses: actions/checkout@abc1234567890abcdef1234567890abcdef12345 # actions/checkout@v4`)
 - Lockfiles committed and validated in CI for every package ecosystem present; CI fails on lockfile drift
 - Dependency audit tooling running on every pull request with findings above an agreed threshold blocking merges
@@ -45,6 +46,7 @@ The underlying model is that **every artifact boundary is an attack surface**. E
 - System package installations in CI scripts pinned to specific versions rather than floating to latest
 
 **Poor design exhibits**:
+
 - GitHub Actions referenced by mutable version tags (`@v4`, `@main`, `@latest`) or by unresolved branch names
 - Missing lockfiles, lockfiles excluded from version control, or lockfiles committed but not validated in CI
 - No dependency audit tooling in CI; vulnerability detection relies on ad-hoc manual review or external notifications
