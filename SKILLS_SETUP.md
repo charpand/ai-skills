@@ -21,6 +21,7 @@ avoid-checkbox-participation, define-quality-bar, jip-en-janneke-explanation, tr
 ## How It Works
 
 Both Copilot and OpenCode discover skills by looking in their respective directories:
+
 - Copilot finds `.claude/skills/<name>/SKILL.md`
 - OpenCode finds `.opencode/skills/<name>/SKILL.md`
 
@@ -63,21 +64,23 @@ metadata:
 ## Usage
 
 **GitHub Copilot:**
-```
+
+```text
 @copilot Use the api-platform-design-review skill
 ```
 
 **OpenCode:**
-```
+
+```text
 /skill api-platform-design-review
 ```
 
 ## Maintenance
 
 To update a skill:
+
 1. Edit `skills/<skill-name>/SKILL.md` directly
 2. Update the description if needed (extract first sentence from Intent section)
 3. Both Copilot and OpenCode automatically see the change via symlinks
 
 The `skills/` directory is now the canonical location. Old skill directories (engineering/, explaining/, governance/, meta/) have been removed.
-

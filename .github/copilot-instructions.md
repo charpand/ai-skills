@@ -17,15 +17,19 @@ See `SKILL_USAGE.md` for detailed guidance on applying skills, and `AGENT_INSTRU
 All 14 skills are located in `skills/` organized by domain:
 
 **Engineering & Design** (10 skills) - Infrastructure design, system architecture evaluation, and technical decision frameworks
+
 - api-platform-design-review, css-design-review, github-cicd-review, go-design-review, html5-accessibility-review, php-design-review, supply-chain-verification, symfony-design-review, terraform-design-review, twig-template-review
 
 **Governance** (1 skill) - Decision quality, participation authenticity, and standards enforcement
+
 - avoid-checkbox-participation
 
 **Explaining** (2 skills) - Communication and translation frameworks for diverse audiences
+
 - jip-en-janneke-explanation, translate-technical-to-nontechnical
 
 **Meta** (1 skill) - Meta-frameworks that apply to skill definition and quality itself
+
 - define-quality-bar
 
 Skills are discoverable at `.claude/skills/` (Copilot) and `.opencode/skills/` (OpenCode) via symlinks.

@@ -15,14 +15,18 @@ This repository contains **skills**: frameworks that define how thinking should 
 ## Using Skills
 
 ### With GitHub Copilot
+
 Skills are discoverable in `.claude/skills/` and can be referenced:
-```
+
+```text
 @copilot Use the api-platform-design-review skill to evaluate this API design
 ```
 
 ### With OpenCode
+
 Skills are discoverable in `.opencode/skills/` and can be loaded:
-```
+
+```text
 /skill api-platform-design-review
 ```
 
@@ -47,7 +51,7 @@ All skills are located in `skills/`:
 
 ## Repository Structure
 
-```
+```text
 skills/                    # Source of truth (14 SKILL.md files)
 ├── api-platform-design-review/
 │   └── SKILL.md
