@@ -75,8 +75,9 @@ metadata:
 ## Maintenance
 
 To update a skill:
-1. Edit the original source file (e.g., `engineering/api-platform-design-review.md`)
-2. Copy it to `skills/<skill-name>/SKILL.md` with YAML frontmatter
-3. Update the description if needed (extract from Intent section)
-4. Both Copilot and OpenCode automatically see the change via symlinks
+1. Edit `skills/<skill-name>/SKILL.md` directly
+2. Update the description if needed (extract first sentence from Intent section)
+3. Both Copilot and OpenCode automatically see the change via symlinks
+
+The `skills/` directory is now the canonical location. Old skill directories (engineering/, explaining/, governance/, meta/) have been removed.
 
