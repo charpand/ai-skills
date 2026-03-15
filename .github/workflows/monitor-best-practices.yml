@@ -31,7 +31,8 @@ jobs:
           findings=""
 
           # Check npm for outdated packages
-          npm outdated --json > /tmp/outdated.json || echo '{}' > /tmp/outdated.json
+          npm outdated --json > /tmp/outdated.json || true
+          jq -e . /tmp/outdated.json > /dev/null 2>&1 || echo '{}' > /tmp/outdated.json
           outdated_count=$(jq 'length' /tmp/outdated.json)
 
           if [ "$outdated_count" -gt 0 ]; then
