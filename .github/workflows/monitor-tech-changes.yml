@@ -28,8 +28,9 @@ jobs:
       - name: Check for npm outdated
         id: outdated
         run: |
-          outdated_json=$(npm outdated --json || echo '{}')
-          echo "outdated=${outdated_json}" >> "$GITHUB_OUTPUT"
+          outdated_json=$(npm outdated --json || true)
+          [ -z "$outdated_json" ] && outdated_json='{}'
+          echo "outdated=$(echo "$outdated_json" | jq -c .)" >> "$GITHUB_OUTPUT"
 
       - name: Check Node.js LTS status
         id: node-status
