@@ -57,6 +57,8 @@ jobs:
 
       - name: Create issue if findings exist
         if: steps.updates.outputs.has_findings == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           findings="${{ steps.updates.outputs.findings }}"
           ./.github/workflows/scripts/create-best-practices-issue.sh "$findings"
