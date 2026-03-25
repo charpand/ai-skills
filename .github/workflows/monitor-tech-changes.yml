@@ -40,6 +40,8 @@ jobs:
 
       - name: Create issue for technology updates
         if: steps.outdated.outputs.outdated != '{}'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           outdated="${{ steps.outdated.outputs.outdated }}"
           ./.github/workflows/scripts/create-tech-update-issue.sh "$outdated"
